@@ -6,10 +6,9 @@
     "node": ">=20",
     "pnpm": ">=9"
   },
-    "scripts": {
-      "dev": "next dev" 
-    }
-  ,
+  "scripts": {
+    "dev": "next dev"
+  },
   "dependencies": {
     "@devnomic/marquee": "^1.0.2",
     "@hookform/resolvers": "^3.3.4",
@@ -49,6 +48,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^1.0.0",
+    "cobe": "^0.6.3",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.0.0",
     "eslint": "8.45.0",

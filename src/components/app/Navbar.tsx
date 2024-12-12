@@ -22,8 +22,8 @@ function Navbar() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
-            <Link href="/library" className="text-lg lg:text-base font-medium">
-              Library
+            <Link href="/prepare" className="text-lg lg:text-base font-medium">
+              Prepare
             </Link>
             <Link href="/announcements" className="text-lg lg:text-base font-medium">
               Announcements
