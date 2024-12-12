@@ -24,36 +24,7 @@ export const metadata: Metadata = {
     default:
       'HCO',
     template: `%s - HCO`,
-  },
-  description:
-    'A collection of neobrutalism-styled Tailwind components for React and Shadcn UI.',
-  keywords: [
-    'neobrutalism',
-    'neobrutalism components',
-    'neobrutalism tailwind',
-    'react neobrutalism',
-    'react tailwind components',
-    'shadcn components',
-    'shadcn neobrutalism',
-  ],
-  authors: [{ name: 'Samuel Breznjak', url: 'https://github.com/ekmas' }],
-  openGraph: {
-    type: 'website',
-    description:
-      'A collection of neobrutalism-styled Tailwind components for React and Shadcn UI.',
-    images: ['https://www.neobrutalism.dev/preview.png'],
-    url: 'https://www.neobrutalism.dev/',
-    title: 'Neobrutalism components',
-  },
-  metadataBase: new URL('https://www.neobrutalism.dev/'),
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Neobrutalism components - Start making neobrutalism layouts',
-    description:
-      'A collection of neobrutalism-styled Tailwind components for React and Shadcn UI.',
-    images: ['https://www.neobrutalism.dev/preview.png'],
-    creator: '@samuelbreznjak',
-  },
+  }
 }
 
 export default function RootLayout({
@@ -79,10 +50,6 @@ export default function RootLayout({
           <div className="hidden">
             <ECInit />
           </div>
-          {/* 
-            Imported markdown to root layout, so copy button on code blocks can work on route change.
-            For more info visit: https://github.com/expressive-code/expressive-code/issues/203
-          */}
         </ThemeProvider>
       </body>
     </html>
