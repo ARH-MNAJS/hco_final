@@ -208,7 +208,7 @@ export default function Home() {
     </div>
 
     <p className="text-2xl font-base m1300:text-xl m800:text-lg m500:text-base">
-      The Olympiad focuses on enhancing participants' coding and problem-solving
+      The Olympiad focuses on enhancing participants coding and problem-solving
       skills, preparing them for real-world challenges.
     </p>
   </section>
