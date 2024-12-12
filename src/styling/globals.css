@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+  --main: #feea63;
+  --main50: #feea63;
+  --main-accent: #feea63;
+
+  --bg: #fffef0;
+  --border: #000;
+
+  --dark-bg: #272933;
+  --dark-border: #000;
+
+  --border-radius: 5px;
+  --horizontal-box-shadow: 4px;
+  --vertical-box-shadow: 4px;
+  --heading-font-weight: 700;
+  --base-font-weight: 500;
+}
+
+body,
+.scrollbar {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #000000;
+  --sb-size: 6px; /* Reduced width for a modern look */
+}
+
+html.dark body,
+html.dark .scrollbar {
+  --sb-track-color: #1b1b1b;
+  --sb-thumb-color: #ffffff;
+}
+
+body::-webkit-scrollbar,
+.scrollbar::-webkit-scrollbar {
+  width: var(--sb-size);
+  border-radius: 10px; /* Rounded corners for a modern style */
+}
+
+body::-webkit-scrollbar-track,
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px; /* Ensure track matches the scrollbar's rounded corners */
+}
+
+body::-webkit-scrollbar-thumb,
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px; /* Smooth and modern scrollbar thumb */
+  border: 1px solid var(--sb-track-color); /* Optional border for a polished effect */
+}
+
+.code::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border: 0 !important;
+  border-radius: 10px;
+}
+
+.code::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.code::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+.command-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.command-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.command-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body,
+  .scrollbar {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+
+  .command-scrollbar {
+    scrollbar-color: #000 transparent;
+  }
+}
+
+/* In your global CSS file */
+.font-cursive {
+  font-family: 'Pacifico', cursive;
+}
+
+
+/* Base styles for the markdown content */
+.markdown-content {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.8;
+  color: #333; /* Neutral text color for light mode */
+  padding: 1rem;
+}
+
+.dark .markdown-content {
+  color: #f4f4f4; /* Lighter text for dark mode */
+}
+
+/* Headings */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  font-weight: bold;
+  line-height: 1.3;
+  color: #d4a017; /* Bright yellow headings */
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-content h1 {
+  font-size: 2.5rem;
+}
+
+.markdown-content h2 {
+  font-size: 2rem;
+}
+
+.markdown-content h3 {
+  font-size: 1.75rem;
+}
+
+.markdown-content h4 {
+  font-size: 1.5rem;
+}
+
+.markdown-content h5 {
+  font-size: 1.25rem;
+}
+
+.markdown-content h6 {
+  font-size: 1rem;
+}
+
+/* Links */
+.markdown-content a {
+  color: #facc15; /* Vibrant yellow for links */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.markdown-content a:hover {
+  color: #eab308;
+  text-decoration: none;
+}
+
+/* Blockquotes */
+.markdown-content blockquote {
+  border-left: 4px solid #d4a017;
+  padding-left: 1rem;
+  margin-left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  background-color: #fffbea;
+  color: #333;
+}
+
+.dark .markdown-content blockquote {
+  background-color: #3f3f3f;
+  color: #f4f4f4;
+}
+
+/* Lists */
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content ul li {
+  list-style: disc;
+}
+
+.markdown-content ol li {
+  list-style: decimal;
+}
+
+.markdown-content ul li::marker,
+.markdown-content ol li::marker {
+  color: #d4a017; /* Yellow list markers */
+}
+
+/* Code Blocks */
+.markdown-content pre {
+  background-color: #27272a; /* Dark background for code blocks */
+  color: #e4e4e7;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content pre code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  display: block;
+}
+
+.markdown-content code {
+  background-color: #fef3c7; /* Subtle yellow for inline code */
+  color: #27272a;
+  font-family: 'Fira Code', monospace;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+/* Tables */
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid #e5e5e5;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.markdown-content th {
+  background-color: #fef3c7; /* Yellow table headers */
+  font-weight: bold;
+}
+
+.dark .markdown-content th {
+  background-color: #44403c;
+  color: #f4f4f4;
+}
+
+.markdown-content td {
+  background-color: #fff;
+}
+
+.dark .markdown-content td {
+  background-color: #3f3f3f;
+  color: #e4e4e7;
+}
+
+/* Horizontal Rule */
+.markdown-content hr {
+  border: none;
+  border-top: 2px solid #facc15; /* Vibrant yellow divider */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Images */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraphs */
+.markdown-content p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Strong/Bold Text */
+.markdown-content strong {
+  color: #d4a017;
+  font-weight: bold;
+}
+
+/* Italic Text */
+.markdown-content em {
+  color: #555;
+  font-style: italic;
+}
+
+/* Custom Styling for Dark Mode */
+.dark .markdown-content {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
